@@ -1,0 +1,35 @@
+const mongoose = require('mongoose')
+
+
+
+const billingCycle = mongoose.model('Billings', {
+    billingCycle: Number,
+    billingMonth: String,
+    amount: Number,
+    startDate: String,
+    endDate: String,
+    lastEdited: String,
+
+    account: {
+        accountName: String,
+        dateCreated: Date,
+        isActive: String,
+        lastEdited: String,
+
+    customer: {
+
+        firstName: String,
+        lastName: String,
+        address: String,
+        status: String,
+        dateCreated: Date,
+        lastEdited: String,
+
+     }
+    }
+
+})
+
+
+
+module.exports = billingCycle
