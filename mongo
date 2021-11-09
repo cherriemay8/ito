@@ -1,0 +1,98 @@
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://127.0.0.1:27017/bars_db') 
+
+const billingCycle = require('../model/billings')
+
+const bars1 = new billingCycle({
+        billingCycle: (1),
+        billingMonth: 'January',
+        amount: 7000,
+        startDate: '01/15/2013',
+        endDate: '2/14/2013',
+        lastEdited: 'admin',
+        account: {
+            accountName: 'AIRA FAUNA ANSAY',
+            dateCreated: new Date(),
+            isActive: 'Y',
+            lastEdited: 'admin',
+            customer: {
+                firstName: 'Aira Fauna',
+                lastName: 'Ansay',
+                address: 'Silang, Cavite',
+                status: 'Y',
+                dateCreated: new Date(),
+                lastEdited: 'admin'
+            }
+        }
+    })
+    const bars2 = new billingCycle(
+	{
+        billingCycle: (1),
+        billingMonth: 'January',
+        amount: 15000,
+        startDate: '01/15/2016',
+        endDate: '02/14/2016',
+        lastEdited: 'admin',
+        account: {
+            accountName: 'STEPHEN ABAD',
+            dateCreated: new Date(),
+            isActive: 'Y',
+            lastEdited: 'admin',
+            customer: {
+                firstName: 'Stephen',
+                lastName: 'Abad',
+                address: 'Metro Manila',
+                status: 'Y',
+                dateCreated: new Date(),
+                lastEdited: 'admin'
+            }
+        }
+    })
+    const bars3 = new billingCycle(
+	{
+        billingCycle: (2),
+        billingMonth: 'February',
+        amount: 10000,
+        startDate: '02/01/2016',
+        endDate: '02/28/2016',
+        lastEdited: 'admin',
+        account: {
+            accountName: 'STEPHEN ABAD',
+            dateCreated: new Date(),
+            isActive: 'Y',
+            lastEdited: 'admin',
+            customer: {
+                firstName: 'Stephen',
+                lastName: 'Abad',
+                address: 'Metro Manila',
+                status: 'Y',
+                dateCreated: new Date(),
+                lastEdited: 'admin'
+            }
+        }
+    })
+    const bars4 = new billingCycle(
+	{
+        billingCycle: (1),
+        billingMonth: 'January',
+        amount: 25000,
+        startDate: new Date('01/01/2016'),
+        endDate: new Date('01/31/2016'),
+        lastEdited: 'admin',
+        account: {
+            accountName: 'DANIEL JEORGE BARRION',
+            dateCreated: new Date(),
+            isActive: 'Y',
+            lastEdited: 'admin',
+            customer: {
+                firstName: 'Daniel Jeorge',
+                lastName: 'Barrion',
+                address: 'Mandaluyong City',
+                status: 'Y',
+                dateCreated: new Date(),
+                lastEdited: 'admin'
+            }
+        }
+    }) 
+
+    module.exports = {bars1, bars2, bars3, bars4}
